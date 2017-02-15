@@ -5,7 +5,6 @@ All URIs are relative to *https://api.electioapp.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addItem**](ItemsApi.md#addItem) | **PUT** /items/{packageReference} | 
-[**addItemsToPackageDeprecated**](ItemsApi.md#addItemsToPackageDeprecated) | **POST** /items/additem/{packageReference} | 
 [**getItemByReference**](ItemsApi.md#getItemByReference) | **GET** /items/{itemReference} | 
 [**getItemsByPackage**](ItemsApi.md#getItemsByPackage) | **GET** /items/package/{packageReference} | 
 [**removeItemFromPackage**](ItemsApi.md#removeItemFromPackage) | **DELETE** /items/{packageReference}/{itemReference} | 
@@ -57,54 +56,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **addItemsToPackageDeprecated**
-> addItemsToPackageDeprecated($packageReference, $subscriptionKey, $ocpApimSubscriptionKey)
-
-
-
-<div class=\"alert alert-danger\"> <span>This endpoint has been deprecated. Please see <a href=\"https://developer.electioapp.com/docs/services/5633280005885e0db815c316/operations/58a434d02e52190fe03ee982\">the new add item endpoint</a></span> </div>  Given an existing package reference, add new item(s) to the package.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new ChrisHemmings\ElectioClient\Api\ItemsApi();
-$packageReference = "packageReference_example"; // string | The reference of the package to add the item to
-$subscriptionKey = "subscriptionKey_example"; // string | subscription key in url
-$ocpApimSubscriptionKey = "ocpApimSubscriptionKey_example"; // string | subscription key in header
-
-try {
-    $api_instance->addItemsToPackageDeprecated($packageReference, $subscriptionKey, $ocpApimSubscriptionKey);
-} catch (Exception $e) {
-    echo 'Exception when calling ItemsApi->addItemsToPackageDeprecated: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **packageReference** | **string**| The reference of the package to add the item to |
- **subscriptionKey** | **string**| subscription key in url | [optional]
- **ocpApimSubscriptionKey** | **string**| subscription key in header | [optional]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
