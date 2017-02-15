@@ -124,7 +124,6 @@ Class | Method | HTTP request | Description
 *DeliveryOptionsApi* | [**selectDeliveryOption**](docs/Api/DeliveryOptionsApi.md#selectdeliveryoption) | **POST** /deliveryoptions/select/{reference} |
 *DocumentsApi* | [**getLabelsForConsignment**](docs/Api/DocumentsApi.md#getlabelsforconsignment) | **GET** /documents/labels/{consignmentReference} |
 *ItemsApi* | [**addItem**](docs/Api/ItemsApi.md#additem) | **PUT** /items/{packageReference} |
-*ItemsApi* | [**addItemsToPackageDeprecated**](docs/Api/ItemsApi.md#additemstopackagedeprecated) | **POST** /items/additem/{packageReference} |
 *ItemsApi* | [**getItemByReference**](docs/Api/ItemsApi.md#getitembyreference) | **GET** /items/{itemReference} |
 *ItemsApi* | [**getItemsByPackage**](docs/Api/ItemsApi.md#getitemsbypackage) | **GET** /items/package/{packageReference} |
 *ItemsApi* | [**removeItemFromPackage**](docs/Api/ItemsApi.md#removeitemfrompackage) | **DELETE** /items/{packageReference}/{itemReference} |
