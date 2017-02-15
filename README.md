@@ -51,17 +51,18 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new ChrisHemmings\ElectioClient\Api\AccountsApi();
-$subscriptionKey = "subscriptionKey_example"; // string | subscription key in url
-$ocpApimSubscriptionKey = "ocpApimSubscriptionKey_example"; // string | subscription key in header
+$apiConfiguration = new ChrisHemmings\ElectioClient\Configuration();
+$apiConfiguration->addDefaultHeader('Ocp-Apim-Subscription-Key', 'ocpApimSubscriptionKey_example');
+$apiClient = new ChrisHemmings\ElectioClient\ApiClient($apiConfiguration);
+
+$api_instance = new ChrisHemmings\ElectioClient\Api\ConsignmentsApi($apiClient);
 
 try {
-    $api_instance->createAccount($subscriptionKey, $ocpApimSubscriptionKey);
+    $consignmentCount = $api_instance->getACountOfConsignments();
+    echo "Current consignment count: " . $consignmentCount . "\n";
 } catch (Exception $e) {
     echo 'Exception when calling AccountsApi->createAccount: ', $e->getMessage(), PHP_EOL;
 }
-
-?>
 ```
 
 ## Documentation for API Endpoints
